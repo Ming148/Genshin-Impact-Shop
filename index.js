@@ -63,7 +63,7 @@ const navbar = (
       <a href="#">
         <BsCart4 style={{ paddingLeft: "1vw", fontSize: "1.25vw" }} />
       </a>
-      <div class="nav-item" style={{marginLeft:"2vw"}}>
+      <div class="nav-item" style={{ marginLeft: "2vw" }}>
         <a href="#">SIGN IN</a>
       </div>
     </div>
