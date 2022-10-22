@@ -1,0 +1,87 @@
+.signin-bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./components/images/loadingscreen.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.signin-weapper {
+    width: 32vw;
+    height: 32vw;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: 1.5vw solid #dfac8b;
+}
+
+.signin {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.75vw;
+    width: fit-content;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 2vw;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw;
+    margin: auto;
+}
+
+.signin-input {
+    border-radius: 15px;
+    padding: 0.55vw;
+    width: 12vw;
+    background-color: #ffe7c1;
+    border: none;
+}
+
+#paimon {
+    position: absolute;
+    width: 15vw;
+    transform: translate(13vw, 9vw);
+    animation: 1.5s linear 1s infinite alternate slideup;
+}
+
+@keyframes slideup {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 5%;
+    }
+}
+
+#signin-button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 15px;
+    border: 2px solid #d0cfcf;
+    background-color: white;
+    margin: auto;
+    cursor: pointer;
+}
+
+#createac {
+    color: #d0cfcf;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#createac:hover {
+    color: #dfac8b;
+}

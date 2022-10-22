@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'HYWenHei';
+  src: url("./frontend/components/font/zh-cn.ttf");
+}
+
+* {
+  margin: 0;
+  font-family: 'HYWenHei';
+  letter-spacing: 1px;
+}
+
+.image-gallery-slide .image-gallery-image {
+  position: relative;
+  transform: translateY(11.5%);
+  object-fit: cover !important;
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  object-position: top;
+}
