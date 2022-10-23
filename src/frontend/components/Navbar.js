@@ -43,7 +43,12 @@ const Navbar_actions = (props) => {
         />
       </a>
       <div class="searchbar">
-        <input class="searchbar-input" placeholder="SEARCH" type="text" size={12} />
+        <input
+          class="searchbar-input"
+          placeholder="SEARCH"
+          type="text"
+          size={12}
+        />
         <BiSearch
           style={{
             color: "white",
@@ -55,7 +60,7 @@ const Navbar_actions = (props) => {
       <a href={props.link}>
         <BsCart4 style={{ paddingLeft: "1vw", fontSize: "1.25vw" }} />
       </a>
-      <Navbar_item value="SIGN IN" margin="ml-2" link="/SignIn"/>
+      <Navbar_item value="SIGN IN" margin="ml-2" link="/SignIn" />
     </div>
   );
 };

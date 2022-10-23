@@ -19,7 +19,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    border: 1.5vw solid #dfac8b;
 }
 
 .signin {
@@ -52,16 +51,26 @@ h1 {
 #paimon {
     position: absolute;
     width: 15vw;
-    transform: translate(13vw, 9vw);
-    animation: 1.5s linear 1s infinite alternate slideup;
+    transform: translate(13vw, 8vw);
+    opacity: 0;
 }
 
 @keyframes slideup {
     from {
-        top: 0%;
+        transform: translate(13vw, 9.5vw);
     }
     to {
-        top: 5%;
+        transform: translate(13vw, 8vw);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(13vw, 9.5vw);
     }
 }
 
@@ -70,7 +79,7 @@ h1 {
     height: 4vw;
     border-radius: 15px;
     border: 2px solid #d0cfcf;
-    background-color: white;
+    background-color: #fff;
     margin: auto;
     cursor: pointer;
 }
@@ -79,9 +88,27 @@ h1 {
     color: #d0cfcf;
     text-align: center;
     cursor: pointer;
-    transition: 0.5s;
+    font-size: 0.75vw;
 }
 
 #createac:hover {
     color: #dfac8b;
+}
+
+#frame-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 37vw;
+}
+
+.checkbox {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 0.75vw;
+    font-size: 0.75vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.5vw;
 }
