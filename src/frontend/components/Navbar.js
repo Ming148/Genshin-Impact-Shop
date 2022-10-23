@@ -9,7 +9,9 @@ import "./Navbar.css";
 const Navbar_item = (props) => {
   return (
     <a href={props.link}>
-      <div className={`nav-item ${props.margin}`}>{props.value}</div>
+      <div className={`nav-item ${props.margin}`}>
+        <p>{props.value}</p>
+      </div>
     </a>
   );
 };
@@ -17,22 +19,34 @@ const Navbar_item = (props) => {
 const Navbar_item_expends = (props) => {
   return (
     <a href={props.link}>
-      <div class="nav-item expends">
-        {props.value}
+      <div
+        className="nav-item expends"
+        onMouseEnter={() => {
+          document.getElementsByClassName("expends-wrapper")[0].style.display = "block";
+        }}
+        onMouseLeave={() => {
+          document.getElementsByClassName("expends-wrapper")[0].style.display = "none";
+        }}
+      >
+        <p>{props.value}</p>
         <RiArrowDownSFill
           style={{
             color: "#444",
             fontSize: "1.25vw",
           }}
         />
-      </div>{" "}
+      </div>
     </a>
   );
 };
 
+const Item_expends = () => {
+  return <div className="expends-wrapper"></div>;
+};
+
 const Navbar_actions = (props) => {
   return (
-    <div class="nav-actions">
+    <div className="nav-actions">
       <a href="#">
         <MdLanguage
           style={{
@@ -42,9 +56,9 @@ const Navbar_actions = (props) => {
           }}
         />
       </a>
-      <div class="searchbar">
+      <div className="searchbar">
         <input
-          class="searchbar-input"
+          className="searchbar-input"
           placeholder="SEARCH"
           type="text"
           size={12}
@@ -67,20 +81,23 @@ const Navbar_actions = (props) => {
 
 const Navbar = () => {
   return (
-    <div class="nav">
-      <div class="nav-logo">
-        <a class="logo" href="/">
-          <img style={{ width: "30%" }} src={logo} />
-        </a>
+    <div className="navbar-wrapper">
+      <div className="nav">
+        <div className="nav-logo">
+          <a className="logo" href="/">
+            <img style={{ width: "30%" }} src={logo} />
+          </a>
+        </div>
+        <div className="nav-merge-item">
+          <Navbar_item_expends value="APPAREL" />
+          <Navbar_item_expends value="COLLECTIBLES" />
+          <Navbar_item_expends value="ACCESSORIES" />
+          <Navbar_item value="SALE" />
+          <Navbar_item value="ART" />
+        </div>
+        <Navbar_actions />
       </div>
-      <div class="nav-merge-item">
-        <Navbar_item_expends value="APPAREL" />
-        <Navbar_item_expends value="COLLECTIBLES" />
-        <Navbar_item_expends value="ACCESSORIES" />
-        <Navbar_item value="SALE" />
-        <Navbar_item value="ART" />
-      </div>
-      <Navbar_actions />
+      <Item_expends />
     </div>
   );
 };
