@@ -6,6 +6,7 @@ import { BiSearch } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import "./Navbar.css";
 
+
 const Navbar_item = (props) => {
   return (
     <a href={props.link}>
@@ -92,7 +93,7 @@ const Navbar = () => {
           <Navbar_item_expends value="APPAREL" />
           <Navbar_item_expends value="COLLECTIBLES" />
           <Navbar_item_expends value="ACCESSORIES" />
-          <Navbar_item value="SALE" />
+          <Navbar_item value="SALE" link="/Sale" />
           <Navbar_item value="ART" />
         </div>
         <Navbar_actions />
